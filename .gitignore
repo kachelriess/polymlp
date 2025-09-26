@@ -1,0 +1,17 @@
+# backup
+*.backup*
+
+# os
+.DS_Store
+Thumbs.db
+
+# ide
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# py
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
