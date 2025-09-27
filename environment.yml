@@ -1,0 +1,9 @@
+name: polymlp
+channels:
+  - defaults
+dependencies:
+  - python>=3.10
+  - ipykernel
+  - jupyter
+  - numpy
+  - pandas
