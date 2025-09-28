@@ -1,0 +1,15 @@
+root: ""
+ignore: []
+batch_size: 32
+epochs: 100
+samples: [8_000, 2_000]
+insert_md: True
+badge_marker: "<!-- BADGES -->"
+leaderboard_marker: "<!-- LEADERBOARD -->"
+badges:
+  - "![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)"
+  - "![Languages](https://img.shields.io/badge/languages-{}-green)"
+  - "![Topology](https://img.shields.io/badge/topology-6→16→16→1-orange)"
+thresholds:
+  mse: 0.1
+  r2: 0.9
