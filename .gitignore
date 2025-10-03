@@ -1,6 +1,9 @@
 # backup
 *.backup*
 
+# results
+**/results/
+
 # os
 .DS_Store
 Thumbs.db
