@@ -21,9 +21,7 @@ def yield_results_dirs(cfg: Dict[str, Any]) -> Generator[Path, None, None]:
 
 def parse_lang(path: Path) -> str:
     lang = re.sub(r"([*_`[\]])", r"\\\1", path.parent.name).lower().capitalize()
-    lang = f"[{lang}](JOURNAL.md#{lang})"
-
-    return lang
+    return f"[{lang}](JOURNAL.md#{lang})"
 
 
 def extract_batch_timing(
@@ -102,7 +100,7 @@ def build_leaderboard(cfg: Dict[str, Any]) -> Tuple[pd.DataFrame, pd.DataFrame]:
             ):
                 if t <= 0:
                     raise ValueError(
-                        f"Mean {col} time is invalid: {t:.8f} seconds."
+                        f"Mean {col} time is invalid: {t:.6f} seconds."
                     )
 
             rows.append(

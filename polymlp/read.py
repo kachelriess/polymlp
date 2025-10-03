@@ -104,7 +104,6 @@ def read_cfg(path: Path) -> dict[str, Any]:
     validate_path_is_file(path)
     cfg = yaml.safe_load(path.read_text())
     validate_cfg(cfg)
-
     return cfg
 
 
@@ -112,5 +111,4 @@ def read_csv(path: Path, columns: List[str], shape_0: int) -> pd.DataFrame:
     validate_path_is_file(path)
     df = pd.read_csv(path)
     validate_df(path, df, columns, shape_0)
-
     return df

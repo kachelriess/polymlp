@@ -1,15 +1,15 @@
 from datetime import datetime
 from pathlib import Path
-from tabulate import tabulate
 from typing import Any, Dict
 
 import pandas as pd
+from tabulate import tabulate
 
 from .format import format_leaderboard
 
 
 def df_to_table(df: pd.DataFrame) -> str:
-    table = tabulate(
+    return tabulate(
         df,  # pyright: ignore[reportArgumentType]
         headers="keys",
         tablefmt="github",
@@ -17,8 +17,6 @@ def df_to_table(df: pd.DataFrame) -> str:
         colalign=["left"] * len(df.columns),
         floatfmt=".4f",
     )
-
-    return table
 
 
 def print_entries(df: pd.DataFrame, passed: bool) -> None:
@@ -78,6 +76,7 @@ def insert_into_readme(cfg: Dict[str, Any], df: pd.DataFrame) -> None:
             + cfg["leaderboard_marker"]
             + content.split(cfg["leaderboard_marker"])[-1]
         )
+
         print(
             f"\n{len(df)} leaderboard {'entry' if len(df) == 1 else 'entries'} inserted into README.\n"
         )
