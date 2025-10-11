@@ -115,7 +115,6 @@ class Matrix:
 
     def __matmul__(self, other: Matrix) -> Matrix:
         assert self.data is not None
-        assert isinstance(other, Matrix)
         assert other.data is not None
         assert self.cols == other.rows
 
