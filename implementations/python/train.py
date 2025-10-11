@@ -50,7 +50,7 @@ def batch_loader(
         yield feature_batch, target_batch
 
 
-def write_results(results: Dict[str, List]) -> None:
+def write_results(results: Dict[str, List[float]]) -> None:
     assert all(
         k in ["forward", "backward", "epoch", "prediction"]
         for k in results.keys()
